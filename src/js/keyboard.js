@@ -104,7 +104,6 @@ class Keyboard {
                     document.getElementById(e.code).classList.add('pushed');
                 }
             }
-        });
         if (e.code == 'ShiftLeft' || e.code == 'ShiftRight') {
             if (this.capslockOn) {
                 this.textCase = 'shiftCapslock';
@@ -114,7 +113,20 @@ class Keyboard {
                 this.swapText(data);
             }
         } 
+})
+
+document.addEventListener('keyup', (e) => {
+    if ((this.pressedKeys['ControlLeft'] && e.code === 'AltLeft') || (this.pressedKeys['AltLeft'] && e.code === 'ControlLeft')) {
+        language = swapLang();
+        swapText(data);
+    }
+
+    pressedKeys = {};
+});
+
+};
 }
 
-}
+
+
 export { Keyboard };
