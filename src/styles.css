@@ -14,7 +14,7 @@ body {
     color: #010717;
     background-color: white;
 }
-.keyboard__keys {
+.keyboard__key {
     border-radius: 5px;
     background-color: rgb(14 15 15);   
     color: #ffffff;
@@ -29,6 +29,19 @@ body {
     width: 45px;
     height: 40px;
 }
+.keyboard__key:first-child {
+    margin-left: 0;
+}
+
+.keyboard__key:hover {
+    background-color: rgba(2, 218, 96, 0.8)!important;   
+}
+
+.keyboard__key.pushed {
+    background-color: rgba(2, 218, 96, 0.8)!important;  
+    border-radius: 20px;
+}
+
 .container {
     width: 815px;
     height: 100vh;
@@ -51,7 +64,34 @@ body {
 
 .textarea {
     width: 100%;
-    height: 200px;
-    
+    height: 230px;
+    border: 2px solid #172f6f;
+    border-radius: 25px;
+    font-family: inherit;
+    color: #172f6f;
+    letter-spacing: 0.06em;
+    background-color: #faefef;
+    padding: 15px;
+    resize: none;
+    margin-bottom: 15px;
+    transition: .5s;
 }
+.keyboard {
+    width: 98%;
+    background-color: #b1e3e9;
+    border-radius: 10px;
+    border: 2px solid #172f6f;
+    padding: 10px;
+}
+
+.keyboard__row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 37px;
+    margin-bottom: 10px;
+}
+
+
 
