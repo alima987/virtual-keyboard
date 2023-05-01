@@ -105,6 +105,16 @@ class Keyboard {
                 }
             }
         });
+        if (e.code == 'ShiftLeft' || e.code == 'ShiftRight') {
+            if (this.capslockOn) {
+                this.textCase = 'shiftCapslock';
+                this.swapText(data);
+            } else {
+                this.textCase = 'upperCase';
+                this.swapText(data);
+            }
+        } 
 }
+
 }
 export { Keyboard };
