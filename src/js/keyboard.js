@@ -131,7 +131,21 @@ document.addEventListener('keyup', (e) => {
     }
     pressedKeys = {};
 });
-
+this.keyboard.addEventListener('click', (e) => {
+    if (e.target.id === 'CapsLock') {
+        if (this.capslockOn) {
+            this.capslockOn = false;
+            this.textCase = 'lowerCase';
+            swapText(data);
+            e.target.classList.remove('pushed');
+        } else {
+            this.capslockOn = true;
+            this.textCase = 'capslock';
+            swapText(data);
+            e.target.classList.add('pushed');
+        }
+    }            
+});
 };
 }
 
