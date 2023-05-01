@@ -37,7 +37,7 @@ body {
     background-color: rgba(2, 218, 96, 0.8)!important;   
 }
 
-.keyboard__key.pushed {
+.keyboard__key.pressed {
     background-color: rgba(2, 218, 96, 0.8)!important;  
     border-radius: 20px;
 }

@@ -137,17 +137,24 @@ this.keyboard.addEventListener('click', (e) => {
             this.capslockOn = false;
             this.textCase = 'lowerCase';
             swapText(data);
-            e.target.classList.remove('pushed');
+            e.target.classList.remove('pressed');
         } else {
             this.capslockOn = true;
             this.textCase = 'capslock';
             swapText(data);
-            e.target.classList.add('pushed');
+            e.target.classList.add('pressed');
         }
     }            
 });
-};
+if ((this.pressedKeys['ControlLeft'] && e.target.id === 'AltLeft') || (this.pressedKeys['AltLeft'] && e.target.id === 'ControlLeft')) {
+    this.language = this.swapLang();
+    swapText(data);
 }
+
+this.pressedKeys = {};
+};
+};
+
 
 
 
