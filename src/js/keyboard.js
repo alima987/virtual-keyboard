@@ -86,7 +86,25 @@ class Keyboard {
             }
         }
     }
-
+    bindEvents() {        
+        document.addEventListener('keydown', (e) => {
+            if (e.code == 'AltLeft' || e.code == 'ControlLeft') {
+                pressedKeys[e.code] = true;
+            }
+            if (e.code == 'CapsLock') {
+                if (this.capslockOn) {
+                    this.capslockOn = false;
+                    this.textCase = 'lowerCase';
+                    this.swapText(this.data);
+                    document.getElementById(e.code).classList.remove('pushed');
+                } else {
+                    this.capslockOn = true;
+                    this.textCase = 'capslock';
+                    this.swapText(this.data);
+                    document.getElementById(e.code).classList.add('pushed');
+                }
+            }
+        });
 }
-
+}
 export { Keyboard };

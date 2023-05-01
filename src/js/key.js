@@ -47,7 +47,7 @@ class Key {
 
         if (e.target.id === 'Tab' || e.code === 'Tab') {
             document.getElementById('textarea').value += '    ';
-        } else if (e.target.id === 'Backspace' || e.code === 'Backspace') {
+        } else if (e.target.id === 'Backspace' || e.code.id === 'Backspace') {
             let length = document.getElementById('textarea').value.length;
             let start = document.getElementById('textarea').selectionStart;
             let end = document.getElementById('textarea').selectionEnd;
