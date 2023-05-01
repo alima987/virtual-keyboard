@@ -92,6 +92,14 @@ body {
     height: 37px;
     margin-bottom: 10px;
 }
+.description {
+    font-size: 20px;
+    margin: 10px;
+}
 
+.note {
+    font-size: 20px;
+    margin: 10px;
+}
 
 
