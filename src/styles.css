@@ -12,7 +12,8 @@ body {
     min-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
     color: #010717;
-    background-color: white;
+    background-color:#c8dde6;
+    
 }
 .keyboard__key {
     border-radius: 5px;
