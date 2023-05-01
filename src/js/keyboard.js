@@ -120,7 +120,15 @@ document.addEventListener('keyup', (e) => {
         language = swapLang();
         swapText(data);
     }
-
+    if (e.code === 'ShiftLeft' || e.code === 'ShiftRight') {
+        if (this.capslockOn) {
+            this.textCase = 'capslock';
+            swapText(data);
+        } else {
+            this.textCase = 'lowerCase';
+            swapText(data);
+        }
+    }
     pressedKeys = {};
 });
 
